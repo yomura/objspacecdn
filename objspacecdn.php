@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: ObjSpace CDN
-Plugin URI: https://github.com/Ipstenu/objspacecdn/
+Plugin URI: https://github.com/yomura/objspacecdn/
 Description: Copies files to ObjSpaceCDN as they are uploaded to the Media Library. Optionally configure a custom domain name as an alias.
-Author: Mika Epstein
-Version: 0.5.3
-Author URI: http://dreamhost.com
+Author: Yomura
+Version: 0.0.1
+Author URI: http://www.obj.space
 Text Domain: objspacecdn
 Domain Path: i18n
 
@@ -15,6 +15,7 @@ Copyright (c) 2014 Mika A Epstein. All rights reserved.
 This plugin is a fork of the following:
  * http://wordpress.org/extend/plugins/amazon-web-services/
  * https://wordpress.org/plugins/amazon-web-services/
+ * https://wordpress.org/plugins/dreamspeed-cdn/
 
     This file is part of ObjSpace CDN, a plugin for WordPress.
 
@@ -63,7 +64,7 @@ if ( !get_option('obspacecdn_importer')) {update_option( 'obspacecdn_importer', 
 
 function obspacecdn_core_init() {
     global $obspacecdn_core;
-    $obspacecdn_core = new ObjSpaceCDN_DHO_Services( __FILE__ );
+    $obspacecdn_core = new ObjSpaceCDN_Services( __FILE__ );
     define('obspacecdn_Services', true);
 }
 

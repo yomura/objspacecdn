@@ -1,23 +1,25 @@
 === ObjSpace CDN ===
 Contributors: Ipstenu
-Tags: cloud, dreamhost, objspacecdn, cdn
+Tags: cloud, objspace, objspacecdn, cdn
 Requires at least: 3.8
 Tested up to: 4.2
 Stable tag: 0.5.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Connect your WordPress install to your DreamHost ObjSpace CDN for supercharged media deployment.
+Connect your WordPress install to your ObjSpace CDN for supercharged media deployment.
 
 == Description ==
 
-<em>Note: If you have issues with the plugin, please post in the support forums here. Don't open a support ticket at DreamHost or use LiveChat unless it's for setting up ObjSpaceCDN in your Panel.</em>
+<em>Note: If you have issues with the plugin, please post in the support forums here.</em>
+
+This plugin is a fork of https://wordpress.org/plugins/dreamspeed-cdn/ which has been adapted to work with Yomura's obj.space object store. For support please open a ticket via the client portal.
 
 This plugin automatically copies images, videos, documents, and any other media added through WordPress' media uploader to ObjSpaceCDN. It then automatically replaces the URL to each media file with their respective ObjSpaceCDN URL or, if you have configured a CDN Alias, the respective custom URL. Image thumbnails are also copied to ObjSpaceCDN and delivered similarly.
 
 Uploading files directly to ObjSpaceCDN is not supported by this plugin. They are uploaded to your server first, via the WordPress media uploader, then copied to ObjSpaceCDN.
 
-Development happens on <a href="https://github.com/Ipstenu/objspacecdn/">Github</a>. Issues and Pull Requests welcome.
+Development happens on <a href="https://github.com/yomura/objspacecdn/">Github</a>. Issues and Pull Requests welcome.
 
 = Known Conflicts =
 
@@ -28,7 +30,7 @@ Development happens on <a href="https://github.com/Ipstenu/objspacecdn/">Github<
 
 == Installation ==
 
-1. Sign up for <a href="http://dreamhost.com/cloud/objspacecdn/">ObjSpaceCDN</a>
+1. Sign up for <a href="http://www.obj.space/">ObjSpaceCDN</a>
 1. Install and Activate the plugin
 1. Fill in your Key and Secret Key
 
@@ -39,14 +41,6 @@ Development happens on <a href="https://github.com/Ipstenu/objspacecdn/">Github<
 <strong>What does it do?</strong>
 
 ObjSpace CDN connects your WordPress site to the ObjSpace CDN, automatically pushing your media up to the CDN making it faster for your visitors.
-
-<strong>Do you work for DreamHost?</strong>
-
-Yes, but this isn't an official DreamHost plugin at this time. I know that's a weird concept, but right now since I'm the only one writing and supporting it, it's not officially supported via DreamHost support. If you have problems, please post in the forums.
-
-<strong>Do I have to host my website on DreamHost?</strong>
-
-You have to use Dream<em>Speed</em>, which belongs to Dream<em>Host</em>. It should work on any modern host with PHP 5.3.3+ and cURL 7.16.2+ (with zLib and OpenSSL) and was tested on a few different Linux hosts, with both Apache and nginx. I have not tested on Windows Servers.
 
 <strong>Can I use this on Multisite?</strong>
 
@@ -60,7 +54,7 @@ I would personally suggest checking the following:
 
 * Copy files to ObjSpaceCDN as they are uploaded to the Media Library
 * Point file URLs to ObjSpaceCDN/DNS Alias for files that have been copied to S3
-* Serve files from dream.io
+* Serve files from obj.space
 
 This will be the fastest
 
@@ -103,7 +97,7 @@ Keep in mind, you cannot use a custom CDN (like cdn.yourdomain.com) with HTTPs a
 First copy it all up via a desktop tool like Cyberduck. Once all the images are in the right place, do a search/replace on your content:
 
 # Find `example.com/wp-content/uploads/`
-# Replace with `bucketname.objects.cdn.dream.io/wp-content/uploads/`
+# Replace with `bucketname.obj.space/wp-content/uploads/`
 
 = Errors, Bugs, and Weird Stuff =
 
@@ -132,54 +126,3 @@ Check if they're failing on the CDN alias, but they do work at the obj.space URL
 7. Media Library with CDN checkmarks
 8. Migrate Existing Files section (on ObjSpace CDN Configuration page)
 
-== Changelog ==
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-= 0.5.3 =
-* Dec 11, 2014 by Ipstenu
-* AWS SDK 2.7.9
-
-= 0.5.2b =
-* Dec 2, 2014 by Ipstenu
-* Adding Plugin icons, no code changed.
-
->>>>>>> REL_0.5.3
-= 0.5.1 && 0.5.2 =
-* Nov 4, 2014 by Ipstenu
-* SSL Fix
-
-= 0.5 =
-* Oct 5, 2014, by Ipstenu
-* Fixing dream.io code, new options
-* SSL improvements
-
-= 0.4 =
-* Aug 7, 2014, by Ipstenu
-* Enabled SSL force option
-
->>>>>>> REL_0.5.1
-= 0.3.1 =
-* July 24, 2014, by Ipstenu
-* Changed SDK to newest version: 2.6.12 (<a href="http://blogs.aws.amazon.com/php/post/Tx2PDR0J3NL0YKN/Release-AWS-SDK-for-PHP-Version-2-6-12">official release notes</a>)
-
-= 0.2 =
-* July 2, 2014, by Ipstenu
-* Changed SDK to newest version: 2.6.10 (<a href="http://blogs.aws.amazon.com/php/post/TxDRVCHQYZSNN7/Release-AWS-SDK-for-PHP-Version-2-6-10">official release notes</a>)
-
-= 0.1 =
-* 07 May 2014 by Ipstenu
-* Multisite works
-* Uploading old media works
-* Imports work
-
-= 0.1-beta =
-* 01 April 2014 by Ipstenu
-* First Release
-
-== Upgrade Notice ==
-
-= 0.5 =
-For faster serving images, please check the ObjSpaceCDN dream.io option in the settings page.

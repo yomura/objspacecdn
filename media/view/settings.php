@@ -99,13 +99,13 @@ if (isset( $_GET['error'] ) ) {
 		<label for="copy-to-s3"> <?php _e( 'Copy files to ObjSpaceCDN as they are uploaded to the Media Library <em>(recommended)</em>', 'objspacecdn' ); ?></label>
 		<br />
 		<input type="checkbox" name="serve-from-s3" value="1" id="serve-from-s3" <?php echo $this->get_setting( 'serve-from-s3' ) ? 'checked="checked" ' : ''; ?> />
-		<label for="serve-from-s3"> <?php _e( 'Point file URLs to ObjSpaceCDN/DNS Alias for files that have been copied to S3 <em>(recommended - can be used with dream.io below)</em>', 'objspacecdn' ); ?></label>
+		<label for="serve-from-s3"> <?php _e( 'Point file URLs to ObjSpaceCDN/DNS Alias for files that have been copied to S3 <em>(recommended)</em>', 'objspacecdn' ); ?></label>
 		<br />
-		<input type="checkbox" name="fullspeed" value="1" id="fullspeed" <?php echo $this->get_setting( 'fullspeed' ) ? 'checked="checked" ' : ''; ?> />
-		<label for="fullspeed"> <?php _e( 'Serve files from dream.io <em>(recommended & fastest)</em>', 'objspacecdn' ); ?></label>
-		<br />
+<!--		<input type="checkbox" name="fullspeed" value="1" id="fullspeed" <?php echo $this->get_setting( 'fullspeed' ) ? 'checked="checked" ' : ''; ?> />
+		<label for="fullspeed"> <?php _e( 'Serve files from objspace.io <em>(recommended & fastest)</em>', 'objspacecdn' ); ?></label>
+		<br /> -->
 		<input type="checkbox" name="force-ssl" value="1" id="force-ssl" <?php echo $this->get_setting( 'force-ssl' ) ? 'checked="checked" ' : ''; ?> />
-		<label for="force-ssl"> <?php _e( 'Always serve files over https (SSL) <em>(slowest - overrides CDN alias and dream.io)</em>', 'objspacecdn' ); ?></label>
+		<label for="force-ssl"> <?php _e( 'Always serve files over https (SSL) <em>(slowest - overrides CDN alias)</em>', 'objspacecdn' ); ?></label>
 		<br />
 
 <!--

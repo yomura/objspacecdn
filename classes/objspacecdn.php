@@ -14,7 +14,7 @@
 
 use Aws\Common\Aws as AwsCDN;
 
-class ObjSpaceCDN_DHO_Services extends ObjSpaceCDN_Plugin_Base {
+class ObjSpaceCDN_Services extends ObjSpaceCDN_Plugin_Base {
 
 	private $plugin_title, $plugin_menu_title, $client;
 

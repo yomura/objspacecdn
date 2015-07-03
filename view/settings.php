@@ -20,9 +20,9 @@
 	
 	<?php 
 	if ( !$this->get_secret_access_key() ) { ?>
-    	<p><?php printf( __( 'If you don&#8217;t have an ObjSpace CDN and ObjSpaceCDN account yet, you need to <a href="%s">sign up</a>.', 'objspacecdn' ), 'http://www.dreamhost.com/cloud/objspacecdncdn/' ); ?></p>
+    	<p><?php printf( __( 'If you don&#8217;t have an ObjSpace CDN and ObjSpaceCDN account yet, you need to <a href="%s">sign up</a>.', 'objspacecdn' ), 'http://www.obj.space/' ); ?></p>
 	
-		<p><?php printf( __( 'If you do have ObjSpaceCDN, you can find your keys in your <a href="%s">panel</a>:', 'objspacecdn' ), 'https://panel.dreamhost.com/index.cgi?tree=cloud.objects&' ); ?></p>
+		<p><?php printf( __( 'If you do have ObjSpaceCDN, you can find your keys in your <a href="%s">panel</a>:', 'objspacecdn' ), 'http://www.obj.space/' ); ?></p>
 		
     <?php } // endif 
     else {

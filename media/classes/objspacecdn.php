@@ -626,7 +626,7 @@ class obspacecdn_Services extends ObjSpaceCDN_Plugin_Base {
 		} elseif ( is_ssl() || $this->get_setting( 'force-ssl' ) ) {
 			$domain_base = 'obj.space/'.$this->get_setting( 'bucket' );
 		} elseif ( $this->get_setting( 'fullspeed' ) == 1 ) {
-			$domain_base = $this->get_setting( 'bucket' ) . '.objects.cdn.dream.io';
+			$domain_base = $this->get_setting( 'bucket' ) . '.obj.space';
 		} else {
 			$domain_base = $this->get_setting( 'bucket' ) . '.obj.space';
 		}
@@ -661,7 +661,7 @@ class obspacecdn_Services extends ObjSpaceCDN_Plugin_Base {
 		}
 
 
-		echo "<p>".__( 'All of your imported media has not <em>YET</em> been uploaded to the Dream Cloud, but it will be soon! The uploads are scheduled via the bulk uploader feature.', 'objspacecdn')."</p>";
+		echo "<p>".__( 'All of your imported media has not <em>YET</em> been uploaded to the ObjSpace, but it will be soon! The uploads are scheduled via the bulk uploader feature.', 'objspacecdn')."</p>";
 	}
 
 }
