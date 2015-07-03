@@ -1,9 +1,9 @@
 <?php
 
 /*
-    This file is part of DreamSpeed CDN, a plugin for WordPress.
+    This file is part of ObjSpace CDN, a plugin for WordPress.
 
-    DreamSpeed CDN is distributed in the hope that it will be useful,
+    ObjSpace CDN is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License v 3 for more details.
@@ -14,15 +14,15 @@
 
 ?>
 
-<div class="dreamspeed-content dreamspeed-settings">
+<div class="objspacecdn-content objspacecdn-settings">
 
 	<h3>Access Keys</h3>
 	
 	<?php 
 	if ( !$this->get_secret_access_key() ) { ?>
-    	<p><?php printf( __( 'If you don&#8217;t have an DreamSpeed CDN and DreamObjects account yet, you need to <a href="%s">sign up</a>.', 'dreamspeed-cdn' ), 'http://www.dreamhost.com/cloud/dreamspeedcdn/' ); ?></p>
+    	<p><?php printf( __( 'If you don&#8217;t have an ObjSpace CDN and ObjSpaceCDN account yet, you need to <a href="%s">sign up</a>.', 'objspacecdn' ), 'http://www.dreamhost.com/cloud/objspacecdncdn/' ); ?></p>
 	
-		<p><?php printf( __( 'If you do have DreamSpeed, you can find your keys in your <a href="%s">panel</a>:', 'dreamspeed-cdn' ), 'https://panel.dreamhost.com/index.cgi?tree=cloud.objects&' ); ?></p>
+		<p><?php printf( __( 'If you do have ObjSpaceCDN, you can find your keys in your <a href="%s">panel</a>:', 'objspacecdn' ), 'https://panel.dreamhost.com/index.cgi?tree=cloud.objects&' ); ?></p>
 		
     <?php } // endif 
     else {
@@ -37,7 +37,7 @@
 		?>
 		<div class="updated">
 			<p class="description">
-				<div class="dashicons dashicons-yes"></div> <?php _e( 'Settings saved.', 'dreamspeed-cdn' ); ?>
+				<div class="dashicons dashicons-yes"></div> <?php _e( 'Settings saved.', 'objspacecdn' ); ?>
 			</p>
 		</div>
 		<?php
@@ -47,25 +47,25 @@
 
 
 	<input type="hidden" name="action" value="save" />
-	<?php wp_nonce_field( 'dreamspeed-save-settings' ) ?>
+	<?php wp_nonce_field( 'objspacecdn-save-settings' ) ?>
 
 	<table class="form-table">
 	<tr valign="top">
-		<th width="33%" scope="row"><?php _e( 'Key:', 'dreamspeed-cdn' ); ?></th>
+		<th width="33%" scope="row"><?php _e( 'Key:', 'objspacecdn' ); ?></th>
 		<td><input type="text" name="access_key_id" value="<?php echo esc_attr( $this->get_access_key_id() ); ?>" size="50" autocomplete="off" /></td>
 	</tr>
 	<tr valign="top">
-		<th width="33%" scope="row"><?php _e( 'Secret Key:', 'dreamspeed-cdn' ); ?></th>
+		<th width="33%" scope="row"><?php _e( 'Secret Key:', 'objspacecdn' ); ?></th>
 		<td><input type="text" name="secret_access_key" value="<?php echo $this->get_secret_access_key() ? '-- not shown --' : ''; ?>" size="50" autocomplete="off" />
 		
-		<p class="description"><div class="dashicons dashicons-shield"></div>  <?php _e( 'Your secret key will not display for your own security.', 'dreamspeed-cdn' ); ?></p>
+		<p class="description"><div class="dashicons dashicons-shield"></div>  <?php _e( 'Your secret key will not display for your own security.', 'objspacecdn' ); ?></p>
 		</td>
 	</tr>
 	<tr valign="top">
 		<td colspan="2">
-			<button type="submit" class="button button-primary"><?php _e( 'Save Changes', 'dreamspeed-cdn' ); ?></button>
+			<button type="submit" class="button button-primary"><?php _e( 'Save Changes', 'objspacecdn' ); ?></button>
 			<?php if ( $this->get_secret_access_key() ) : ?>
-			&nbsp;<button class="button remove-keys"><?php _e( 'Remove Keys', 'dreamspeed-cdn' ); ?></button>
+			&nbsp;<button class="button remove-keys"><?php _e( 'Remove Keys', 'objspacecdn' ); ?></button>
 			<?php endif; ?>
 		</td>
 	</tr>

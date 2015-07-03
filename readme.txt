@@ -1,23 +1,23 @@
-=== DreamSpeed CDN ===
+=== ObjSpace CDN ===
 Contributors: Ipstenu
-Tags: cloud, dreamhost, dreamspeed, cdn
+Tags: cloud, dreamhost, objspacecdn, cdn
 Requires at least: 3.8
 Tested up to: 4.2
 Stable tag: 0.5.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Connect your WordPress install to your DreamHost DreamSpeed CDN for supercharged media deployment.
+Connect your WordPress install to your DreamHost ObjSpace CDN for supercharged media deployment.
 
 == Description ==
 
-<em>Note: If you have issues with the plugin, please post in the support forums here. Don't open a support ticket at DreamHost or use LiveChat unless it's for setting up DreamSpeed in your Panel.</em>
+<em>Note: If you have issues with the plugin, please post in the support forums here. Don't open a support ticket at DreamHost or use LiveChat unless it's for setting up ObjSpaceCDN in your Panel.</em>
 
-This plugin automatically copies images, videos, documents, and any other media added through WordPress' media uploader to DreamSpeed. It then automatically replaces the URL to each media file with their respective DreamObjects URL or, if you have configured a CDN Alias, the respective custom URL. Image thumbnails are also copied to DreamSpeed and delivered similarly.
+This plugin automatically copies images, videos, documents, and any other media added through WordPress' media uploader to ObjSpaceCDN. It then automatically replaces the URL to each media file with their respective ObjSpaceCDN URL or, if you have configured a CDN Alias, the respective custom URL. Image thumbnails are also copied to ObjSpaceCDN and delivered similarly.
 
-Uploading files directly to DreamSpeed is not supported by this plugin. They are uploaded to your server first, via the WordPress media uploader, then copied to DreamSpeed.
+Uploading files directly to ObjSpaceCDN is not supported by this plugin. They are uploaded to your server first, via the WordPress media uploader, then copied to ObjSpaceCDN.
 
-Development happens on <a href="https://github.com/Ipstenu/dreamspeed/">Github</a>. Issues and Pull Requests welcome.
+Development happens on <a href="https://github.com/Ipstenu/objspacecdn/">Github</a>. Issues and Pull Requests welcome.
 
 = Known Conflicts =
 
@@ -28,7 +28,7 @@ Development happens on <a href="https://github.com/Ipstenu/dreamspeed/">Github</
 
 == Installation ==
 
-1. Sign up for <a href="http://dreamhost.com/cloud/dreamspeed/">DreamSpeed</a>
+1. Sign up for <a href="http://dreamhost.com/cloud/objspacecdn/">ObjSpaceCDN</a>
 1. Install and Activate the plugin
 1. Fill in your Key and Secret Key
 
@@ -38,7 +38,7 @@ Development happens on <a href="https://github.com/Ipstenu/dreamspeed/">Github</
 
 <strong>What does it do?</strong>
 
-DreamSpeed CDN connects your WordPress site to the DreamSpeed CDN, automatically pushing your media up to the CDN making it faster for your visitors.
+ObjSpace CDN connects your WordPress site to the ObjSpace CDN, automatically pushing your media up to the CDN making it faster for your visitors.
 
 <strong>Do you work for DreamHost?</strong>
 
@@ -58,8 +58,8 @@ Yes, but it has to be configured per site.
 
 I would personally suggest checking the following:
 
-* Copy files to DreamSpeed as they are uploaded to the Media Library
-* Point file URLs to DreamSpeed/DNS Alias for files that have been copied to S3
+* Copy files to ObjSpaceCDN as they are uploaded to the Media Library
+* Point file URLs to ObjSpaceCDN/DNS Alias for files that have been copied to S3
 * Serve files from dream.io
 
 This will be the fastest
@@ -109,7 +109,7 @@ First copy it all up via a desktop tool like Cyberduck. Once all the images are 
 
 <strong>Why, when my URLs changed to the CDN, are they all broken images?</strong>
 
-Make sure your CDN URL is working. If you have Cloudflare or something proxy-ish in front of your domain, you may need to edit DNS directly and point your CDN alias to DreamSpeed.
+Make sure your CDN URL is working. If you have Cloudflare or something proxy-ish in front of your domain, you may need to edit DNS directly and point your CDN alias to ObjSpaceCDN.
 
 <strong>I have a post and the links still are local, even though the images are on CDN. What gives?</strong>
 
@@ -119,18 +119,18 @@ Of note: Currently the official WordPress importers aren't standardized, so ther
 
 <strong>Why aren't my images found?</strong>
 
-Check if they're failing on the CDN alias, but they do work at the objects.dreamhost.com URL. If so, you somehow goofed your permissions. You have to go into the DreamObjects editor and set permissions from PRIVATE to PUBLIC. This happens usually because the bucket was private when you made it.
+Check if they're failing on the CDN alias, but they do work at the obj.space URL. If so, you somehow goofed your permissions. You have to go into the ObjSpaceCDN editor and set permissions from PRIVATE to PUBLIC. This happens usually because the bucket was private when you made it.
 
 == Screenshots ==
 
-1. DreamObjects Keys
-2. DreamObjects Buckets
-3. DreamObjects Bucket Settings
-4. DreamSpeed CDN Key Settings (empty)
-5. DreamSpeed CDN Key Settings (filled in)
-6. DreamSpeed CDN Configuration Settings
+1. ObjSpaceCDN Keys
+2. ObjSpaceCDN Buckets
+3. ObjSpaceCDN Bucket Settings
+4. ObjSpace CDN Key Settings (empty)
+5. ObjSpace CDN Key Settings (filled in)
+6. ObjSpace CDN Configuration Settings
 7. Media Library with CDN checkmarks
-8. Migrate Existing Files section (on DreamSpeed CDN Configuration page)
+8. Migrate Existing Files section (on ObjSpace CDN Configuration page)
 
 == Changelog ==
 
@@ -182,4 +182,4 @@ Check if they're failing on the CDN alias, but they do work at the objects.dream
 == Upgrade Notice ==
 
 = 0.5 =
-For faster serving images, please check the DreamSpeed dream.io option in the settings page.
+For faster serving images, please check the ObjSpaceCDN dream.io option in the settings page.

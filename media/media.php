@@ -1,9 +1,9 @@
 <?php
 
 /*
-    This file is part of DreamSpeed CDN, a plugin for WordPress.
+    This file is part of ObjSpace CDN, a plugin for WordPress.
 
-    DreamSpeed CDN is distributed in the hope that it will be useful,
+    ObjSpace CDN is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License v 3 for more details.
@@ -12,19 +12,19 @@
 
 */
 
-function dreamspeed_init( $dos ) {
-    global $dreamspeed;
-    require_once 'classes/dreamspeed.php';
-    $dreamspeed = new DreamSpeed_Services( __FILE__, $dos );
+function obspacecdn_init( $dos ) {
+    global $objspacecdn;
+    require_once 'classes/objspacecdn.php';
+    $objspacecdn = new obspacecdn_Services( __FILE__, $dos );
     
     // Sync existing media if called
-    add_action( 'dreamspeed_media_sync', array( $dreamspeed, 'bulk_upload_to_dreamspeed') );
-    add_action( 'import_start', array( $dreamspeed, 'import_start') );
-    add_action( 'import_end', array( $dreamspeed, 'import_end') );
+    add_action( 'obspacecdn_media_sync', array( $objspacecdn, 'bulk_upload_to_objspacecdn') );
+    add_action( 'import_start', array( $objspacecdn, 'import_start') );
+    add_action( 'import_end', array( $objspacecdn, 'import_end') );
 }
 
 // If everything is set...
-add_action( 'dreamspeed_init', 'dreamspeed_init' );
+add_action( 'obspacecdn_init', 'obspacecdn_init' );
 
 /**
  * @since 2.0
@@ -33,4 +33,4 @@ add_action( 'dreamspeed_init', 'dreamspeed_init' );
  * @param int $expires Secondes for the link to live
  * @return array
  */
-function dreamspeed_get_secure_attachment_url( $post_id, $expires = 900, $operation = 'GET' ) {}
+function obspacecdn_get_secure_attachment_url( $post_id, $expires = 900, $operation = 'GET' ) {}

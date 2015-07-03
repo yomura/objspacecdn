@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: DreamSpeed CDN\n"
+"Project-Id-Version: ObjSpace CDN\n"
 "POT-Creation-Date: 2014-10-05 15:31-0800\n"
 "PO-Revision-Date: 2014-10-05 15:31-0800\n"
 "Last-Translator: Mika Epstein (Ipstenu) <ipstenu@ipstenu.org>\n"
@@ -13,82 +13,82 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../dreamspeed-cdn.php:38
+#: ../objspacecdn.php:38
 msgid ""
-"The official Amazon Web Services SDK, which DreamSpeed relies on, requires "
+"The official Amazon Web Services SDK, which ObjSpaceCDN relies on, requires "
 "PHP 5.3 or higher. The plugin has now disabled itself."
 msgstr ""
 
-#: ../dreamspeed-cdn.php:44
+#: ../objspacecdn.php:44
 msgid ""
-"The official Amazon Web Services SDK, which DreamSpeed relies on requires "
+"The official Amazon Web Services SDK, which ObjSpaceCDN relies on requires "
 "cURL 7.16.2+. The plugin has now disabled itself."
 msgstr ""
 
-#: ../dreamspeed-cdn.php:47
+#: ../objspacecdn.php:47
 msgid ""
-"The official Amazon Web Services SDK, which DreamSpeed relies on requires "
+"The official Amazon Web Services SDK, which ObjSpaceCDN relies on requires "
 "that cURL is compiled with OpenSSL. The plugin has now disabled itself."
 msgstr ""
 
-#: ../dreamspeed-cdn.php:50
+#: ../objspacecdn.php:50
 msgid ""
-"The official Amazon Web Services SDK, which DreamSpeed relies on requires "
+"The official Amazon Web Services SDK, which ObjSpaceCDN relies on requires "
 "that cURL is compiled with zlib. The plugin has now disabled itself."
 msgstr ""
 
-#: ../classes/dreamobjects.php:35
-msgid "DreamSpeed CDN"
+#: ../classes/objspacecdn.php:35
+msgid "ObjSpace CDN"
 msgstr ""
 
-#: ../classes/dreamobjects.php:36
-msgid "DreamSpeed"
+#: ../classes/objspacecdn.php:36
+msgid "ObjSpaceCDN"
 msgstr ""
 
-#: ../classes/dreamobjects.php:44 ../classes/dreamobjects.php:47
+#: ../classes/objspacecdn.php:44 ../classes/objspacecdn.php:47
 msgid "Settings"
 msgstr ""
 
-#: ../classes/dreamobjects.php:76 ../media/classes/dreamspeed.php:481
+#: ../classes/objspacecdn.php:76 ../media/classes/objspacecdn.php:481
 msgid "Cheatin' eh?"
 msgstr ""
 
-#: ../classes/dreamobjects.php:120
+#: ../classes/objspacecdn.php:120
 #, php-format
 msgid ""
 "<div class=\"dashicons dashicons-no\"></div> Please <a href=\"%s\">set your "
 "access keys</a> first."
 msgstr ""
 
-#: ../media/classes/dreamspeed.php:31
-msgid "DreamSpeed CDN Configuration"
+#: ../media/classes/objspacecdn.php:31
+msgid "ObjSpace CDN Configuration"
 msgstr ""
 
-#: ../media/classes/dreamspeed.php:32
+#: ../media/classes/objspacecdn.php:32
 msgid "CDN"
 msgstr ""
 
-#: ../media/classes/dreamspeed.php:403
+#: ../media/classes/objspacecdn.php:403
 msgid "Cheatin&#8217; eh?"
 msgstr ""
 
-#: ../media/classes/dreamspeed.php:407
+#: ../media/classes/objspacecdn.php:407
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: ../media/classes/dreamspeed.php:415
+#: ../media/classes/objspacecdn.php:415
 msgid "No bucket name provided."
 msgstr ""
 
-#: ../media/classes/dreamspeed.php:469
+#: ../media/classes/objspacecdn.php:469
 msgid "Bucket Name:"
 msgstr ""
 
-#: ../media/classes/dreamspeed.php:470
+#: ../media/classes/objspacecdn.php:470
 msgid "Error creating bucket: "
 msgstr ""
 
-#: ../media/classes/dreamspeed.php:664
+#: ../media/classes/objspacecdn.php:664
 msgid ""
 "All of your imported media has not <em>YET</em> been uploaded to the Dream "
 "Cloud, but it will be soon! The uploads are scheduled via the bulk uploader "
@@ -96,7 +96,7 @@ msgid ""
 msgstr ""
 
 #: ../media/view/settings.php:27
-msgid "Error retrieving a list of your buckets from DreamObjects:"
+msgid "Error retrieving a list of your buckets from ObjSpaceCDN:"
 msgstr ""
 
 #: ../media/view/settings.php:37 ../view/settings.php:40
@@ -160,13 +160,13 @@ msgstr ""
 
 #: ../media/view/settings.php:99
 msgid ""
-"Copy files to DreamSpeed as they are uploaded to the Media Library "
+"Copy files to ObjSpaceCDN as they are uploaded to the Media Library "
 "<em>(recommended)</em>"
 msgstr ""
 
 #: ../media/view/settings.php:102
 msgid ""
-"Point file URLs to DreamSpeed/DNS Alias for files that have been copied to "
+"Point file URLs to ObjSpaceCDN/DNS Alias for files that have been copied to "
 "S3 <em>(recommended - can be used with dream.io below)</em>"
 msgstr ""
 
@@ -191,7 +191,7 @@ msgstr ""
 #: ../media/view/settings.php:122
 msgid ""
 "If you use an alias for your CDN (like http://cdn.example.com) then you can "
-"tell DreamSpeed to use that instead of the default http://objects.dreamhost."
+"tell ObjSpaceCDN to use that instead of the default http://objects.dreamhost."
 "com/bucketname. Both URLs will always work, but pretty CDN is pretty."
 msgstr ""
 
@@ -222,7 +222,7 @@ msgstr ""
 #: ../media/view/settings.php:168
 msgid ""
 "If want to upload existing images, check the following box and they will "
-"begin to upload to DreamSpeed. If you have a high number of images, the "
+"begin to upload to ObjSpaceCDN. If you have a high number of images, the "
 "uploader will run as long as it can, and then <em>schedule</em> a retry in "
 "an hour. To see if your images are uploaded to the Cloud, check the <a href="
 "\"upload.php\">Media Library</a>. Any item with a green checkmark under the "
@@ -232,7 +232,7 @@ msgstr ""
 
 #: ../media/view/settings.php:171
 #, php-format
-msgid "%d file(s) can be migrated to DreamSpeed."
+msgid "%d file(s) can be migrated to ObjSpaceCDN."
 msgstr ""
 
 #: ../media/view/settings.php:177
@@ -244,20 +244,20 @@ msgid "All your media files are uploaded to the cloud! Celebrate!"
 msgstr ""
 
 #: ../view/header.php:3
-msgid "DreamSpeed Connection Settings"
+msgid "ObjSpaceCDN Connection Settings"
 msgstr ""
 
 #: ../view/settings.php:23
 #, php-format
 msgid ""
-"If you don&#8217;t have an DreamSpeed CDN and DreamObjects account yet, you "
+"If you don&#8217;t have an ObjSpace CDN and ObjSpaceCDN account yet, you "
 "need to <a href=\"%s\">sign up</a>."
 msgstr ""
 
 #: ../view/settings.php:25
 #, php-format
 msgid ""
-"If you do have DreamSpeed, you can find your keys in your <a href=\"%s"
+"If you do have ObjSpaceCDN, you can find your keys in your <a href=\"%s"
 "\">panel</a>:"
 msgstr ""
 

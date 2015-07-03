@@ -1,3 +1,3 @@
-<div class="wrap dreamspeed-main">
+<div class="wrap objspacecdn-main">
 
-	<h2><?php echo ( isset( $page_title ) ) ? $page_title : __( 'DreamSpeed Connection Settings', 'dreamspeed-cdn' ); ?></h2>
+	<h2><?php echo ( isset( $page_title ) ) ? $page_title : __( 'ObjSpaceCDN Connection Settings', 'objspacecdn' ); ?></h2>

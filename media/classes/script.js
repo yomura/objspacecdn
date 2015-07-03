@@ -2,7 +2,7 @@
 
 	$(document).ready(function() {
 
-		$('.dreamspeed-settings').each(function() {
+		$('.objspacecdn-settings').each(function() {
 			var $container = $(this);
 
 			$('select.bucket', $container).change(function() {
@@ -13,7 +13,7 @@
 				}
 
 				var error_func = function(jqXHR, textStatus, errorThrown) {
-					alert(dreamspeed_i18n.create_bucket_error + errorThrown);
+					alert(obspacecdn_i18n.create_bucket_error + errorThrown);
 					$select[0].selectedIndex = 0;
 					console.log( jqXHR );
 					console.log( textStatus );
@@ -41,24 +41,24 @@
 
 						// If they decided to create a new bucket before refreshing
 						// the page, we need another nonce
-						dreamspeed_i18n.create_bucket_nonce = data['_nonce'];
+						obspacecdn_i18n.create_bucket_nonce = data['_nonce'];
 					}
 					else {
-						alert(dreamspeed_i18n.create_bucket_error + data['error']);
+						alert(obspacecdn_i18n.create_bucket_error + data['error']);
 						$select[0].selectedIndex = 0;
 					}
 				};
 
-				var bucket_name = window.prompt(dreamspeed_i18n.create_bucket_prompt);
+				var bucket_name = window.prompt(obspacecdn_i18n.create_bucket_prompt);
 				if (!bucket_name) {
 					$select[0].selectedIndex = 0;
 					return;
 				}
 
 				var data = {
-					action: 		'dreamspeed-create-bucket',
+					action: 		'objspacecdn-create-bucket',
 					bucket_name: 	bucket_name,
-					_nonce:			dreamspeed_i18n.create_bucket_nonce
+					_nonce:			obspacecdn_i18n.create_bucket_nonce
 				};
 
 				$.ajax({
